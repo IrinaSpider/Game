@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Games for Kids</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<!--ДВЕРИ-->
+	<div class="container doors" style="display: flex;">
+		<div class="col-3 mt-4 door1">
+			<img src="door.png" class="w-100">
+		</div>
+		<div class="col-3 px-4 mt-4 door2">
+			<img src="1.jpg" class="w-75">
+		</div>
+		<div class="col-2 mt-4">
+			<img src="door3.png" class="w-100">
+		</div>
+	</div>	
+	<div>
+		<!--МИР ГП-->
+		<div style="background-image: url(bg.jpg); background-size: 100% 100%; display: none; height: 900px;" class="HP">
+			<h4 class="text-white">Найти 3 объекта по Гарри Поттеру</h4>
+			<div class="innerHTML score" style="color: white; margin-top: -10px; font-size: 40px;"></div>
+			<button class="btn-success btn">Выйти из игры</button>
+			<!--ПРЕДМЕТЫ-->
+			<div class="col-1 mantiya" style="position: absolute;">
+				<img src="mantiya.png" style="margin-top: 50px;margin-left: 450px; height: 40px;">
+			</div>
+			<div class="col-1 palochka" style="position: absolute;">
+				<img src="palochka.png" style="margin-top: 500px;margin-left: 900px; height: 40px;">
+			</div>
+			<div class="col-1 metla" style="position: absolute;">
+				<img src="metla.png" style="margin-top: 600px;margin-left: 600px; height: 40px;">
+			</div>
+			<div class="col-1 mt-2 ml-4 gun" style="position: absolute;">
+				<img src="gun.png" style="margin-top: 100px;margin-left: 300px; height: 40px;">
+			</div>
+			<div class="col-1 mt-2 ml-4 ring" style="position: absolute;">
+				<img src="ring.png" style="margin-top: 200px;margin-left: 00px; height: 20px;">
+			</div>
+		</div>
+	</div>
+	<!--RE2-->
+	<div>
+		<div style="background-image: url(8.jpg); background-size: 100% 100%; display: none; height: 900px;" class="RE2">
+			<h4 class="text-white">Собери инвентарь Леона/Клэр</h4>
+			<div class="innerHTML scores" style="color: white; margin-top: -10px; font-size: 40px;"></div>
+			<button class="btn-success button">Выйти из игры</button>
+			<!--ПРЕДМЕТЫ-->
+			<div class="col-1 guner" style="position: absolute;">
+				<img src="7.jpg" style="margin-top: 790px;margin-right: 200px; margin-left: 200px; height: 10px;">
+			</div>
+			<div class="col-1 maner" style="position: absolute;">
+				<img src="4.jpg" style="margin-top: 150px;margin-left: 885px; height: 10px;">
+			</div>
+			<div class="col-1 baner" style="position: absolute;">
+				<img src="10.jpg" style="margin-bottom: 50px;margin-left: 830px; height: 10px;">
+			</div>
+			<div class="col-1 mt-2 ml-4 huner" style="position: absolute;">
+				<img src="6.jpg" style="margin-top: 100px;margin-left: 300px; height: 40px;">
+			</div>
+		</div>
+	</div>
+		
+	<script type="text/javascript">
+		let score = 0;
+		document.querySelector(".door1").onclick = function(){
+			document.querySelector(".HP").style.display = "block"
+			document.querySelector(".doors").style.display = "none"
+	}
+		document.querySelector(".mantiya").onclick = function(){
+			document.querySelector(".mantiya").style.display = "none"
+			document.querySelector(".score").innerHTML=score=score+1
+	}
+		document.querySelector(".palochka").onclick = function(){
+			document.querySelector(".palochka").style.display = "none"
+			document.querySelector(".score").innerHTML=score=score+1
+	}
+		document.querySelector(".metla").onclick = function(){
+			document.querySelector(".metla").style.display = "none"
+    		document.querySelector(".score").innerHTML=score=score+1
+	}
+		document.querySelector(".gun").onclick = function(){}
+		
+		document.querySelector(".ring").onclick = function(){}
+	
+	document.querySelector(".btn").onclick = function(){
+			document.querySelector(".doors").style.display = "flex"
+			document.querySelector(".HP").style.display = "none"
+	}
+		
+	let scores = 0
+		document.querySelector(".door2").onclick = function(){
+			document.querySelector(".RE2").style.display = "block"
+			document.querySelector(".doors").style.display = "none"
+	}
+	document.querySelector(".guner").onclick = function(){
+			document.querySelector(".guner").style.display = "none"
+			document.querySelector(".scores").innerHTML=scores=scores+1
+	}
+		document.querySelector(".huner").onclick = function(){
+			document.querySelector(".huner").style.display = "none"
+			document.querySelector(".scores").innerHTML=scores=scores+1
+	}
+		document.querySelector(".baner").onclick = function(){
+			document.querySelector(".baner").style.display = "none"
+    		document.querySelector(".scores").innerHTML=scores=scores+1
+	}
+		document.querySelector(".maner").onclick = function(){}
+		document.querySelector(".button").onclick = function(){
+			document.querySelector(".doors").style.display = "flex"
+			document.querySelector(".RE2").style.display = "none"
+		}
+	</script>
+</body>
+</html>
